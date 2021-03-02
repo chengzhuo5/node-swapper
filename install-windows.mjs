@@ -1,4 +1,3 @@
-// import addEnv from './utils/windows/addEnv.mjs';
 import { execSync } from 'child_process';
 import getNode from './utils/getNode.mjs';
 import installNode from './utils/installNode.mjs';

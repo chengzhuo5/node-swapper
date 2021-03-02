@@ -1,7 +1,7 @@
 import path from 'path';
 import decompress from 'decompress';
 import addEnvForWindows from './windows/addEnv.mjs';
-import addPathEnvForWindows from './windows/addPathEnv.mjs';
+import { addPathEnv as addPathEnvForWindows } from './windows/pathEnv.mjs';
 import { nodeDir, platform, envKey } from '../constant.mjs';
 
 const extractNode = async (filePath) => {
