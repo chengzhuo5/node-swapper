@@ -2,6 +2,7 @@
   "name": "node-swapper",
   "version": "0.0.1",
   "license": "MIT",
+  "author": "chengzhuo5",
   "dependencies": {
     "axios": "^0.21.1",
     "decompress": "^4.2.1",
@@ -12,5 +13,10 @@
   },
   "bin": {
     "install": "./bin/install.mjs"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chengzhuo5/node-swapper"
+  },
+  "homepage": "https://github.com/chengzhuo5/node-swapper"
 }
