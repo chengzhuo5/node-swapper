@@ -4,4 +4,4 @@ const uninstall = async () => {
   uninstallNode();
 };
 
-uninstall();
+export default uninstall;
