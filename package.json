@@ -1,6 +1,6 @@
 {
-  "name": "node-swapper-core",
-  "version": "1.0.0",
+  "name": "node-swapper",
+  "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
@@ -9,5 +9,8 @@
     "regedit": "^3.0.3",
     "request": "^2.88.2",
     "winreg": "^1.2.4"
+  },
+  "bin": {
+    "install": "./bin/install.mjs"
   }
 }

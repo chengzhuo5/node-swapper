@@ -50,6 +50,30 @@ export const addPathEnv = (value) => {
   });
 };
 
+export const clearPathEnv = (value) => {
+  return new Promise((resolve, reject) => {
+    const regKey = new Registry({
+      hive: Registry.HKLM,
+      key: '\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Environment',
+    });
+
+    regKey.values(function (err, items) {
+      if (err) {
+        reject(err);
+      } else {
+        const pathValue = items.filter((item) => item.name === pathKey)[0]
+          .value;
+        const pathValues = pathValue
+          .match(/(\".+?\")|(.+?);/g)
+          .map((item) =>
+            item === value || item === value + ';' ? 'NULL' : item
+          );
+        setPath(pathValues.join('')).then(resolve);
+      }
+    });
+  });
+};
+
 export const removePathEnv = (value) => {
   return new Promise((resolve, reject) => {
     const regKey = new Registry({

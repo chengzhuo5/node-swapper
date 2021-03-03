@@ -1,4 +1,4 @@
-import uninstallNode from './utils/uninstallNode.mjs';
+import uninstallNode from '../utils/uninstallNode.mjs';
 
 const uninstall = async () => {
   uninstallNode();
