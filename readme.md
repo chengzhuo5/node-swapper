@@ -6,7 +6,7 @@
 
 在管理员权限下运行：
 
-`npm i node-swapper -g`
+`npm i @minar-kotonoha/node-swapper -g`
 
 ## 安装 Node 版本
 
@@ -24,5 +24,5 @@ node-swapper install 15.10.0
 
 ```javascript
 node-swapper uninstall
-npm uninstall node-swapper -g
+npm uninstall @minar-kotonoha/node-swapper -g
 ```
