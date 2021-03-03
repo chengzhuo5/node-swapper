@@ -1,11 +1,14 @@
-import { clearPathEnv as clearPathEnvForWindows } from './windows/pathEnv.mjs';
+import {
+  clearPathEnv as clearPathEnvForWindows,
+  removePathEnv as removePathEnvForWindows,
+} from './windows/pathEnv.mjs';
 import { platform, envKey } from '../constant.mjs';
 
 const removeNodeEnv = () => {
   console.log('删除环境变量');
   switch (platform) {
     case 'win':
-      clearPathEnvForWindows(`%${envKey}%`);
+      removePathEnvForWindows(`%${envKey}%`);
       break;
 
     default:

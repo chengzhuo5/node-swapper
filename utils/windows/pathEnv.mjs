@@ -66,7 +66,7 @@ export const clearPathEnv = (value) => {
         const pathValues = pathValue
           .match(/(\".+?\")|(.+?);/g)
           .map((item) =>
-            item === value || item === value + ';' ? 'NULL' : item
+            item === value || item === value + ';' ? 'NULL;' : item
           );
         setPath(pathValues.join('')).then(resolve);
       }
